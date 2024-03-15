@@ -1,0 +1,358 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Sign up And Login  Form */
+.login_body , .signup_body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../images/register/register.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    position: relative;
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+    width: 60%;
+    height: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    filter: blur(75%);
+    -webkit-filter: blur(75%);
+    box-shadow: 0 0 1rem #ff9151;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+}
+.signup_body form.signup__form{
+    width: 100%;
+    height: 100%;
+}
+form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+form * {
+    position: relative;
+    z-index: 2;
+}
+form .header_form {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #ff9151;
+    color: #ff9151;
+}
+
+form .login_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: #ff9151;
+    font-weight: bolder;
+    gap: 1rem;
+}
+.signup_body form .signup_container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+    color: #ff9151;
+    gap: 2rem;
+    width: 100%;
+}
+.signup_container div{
+    width: 100%;
+}
+input[type="file"]{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px #ff9151;
+    margin-right: 16px;
+    transition: background-color 200ms;
+}
+
+  /* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+    background-color: #ff9151;
+}
+
+  /* file upload button active state */
+input[type="file"]::file-selector-button:active {
+    background-color: #ff9151;
+}
+label {
+    display: block;
+    margin: 2rem 0;
+    font-size: 1.3rem;
+}
+
+
+input {
+    width: 100%;
+    padding: 0.3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    font-size: large;
+    text-align: center;
+    transition-duration: 1s;
+    color: #ff9151;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+}
+input:hover,input:focus{
+    box-shadow: 0 0 1rem #ff9151;
+}
+.error_message{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+.container__submit{
+    margin: 2rem 0;
+}
+button {
+    background-color: #ff9151;
+    color: #fff;
+    width: 7rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: larger;
+    font-weight: bolder;
+    transition-duration: 1s;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+button:hover {
+    background-color: #ff9151c0;
+}
+
+
+.checkbox-wrapper-24 .checkbox {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.checkbox-wrapper-24 label {
+    display: inline-block;
+    color: #ff9151;
+    cursor: pointer;
+    position: relative;
+}
+.checkbox-wrapper-24 label span {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    transform-origin: center;
+    border: 2px solid #ff9151;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+.checkbox-wrapper-24 label span:before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    border-radius: 2px;
+    background: #ccc;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 13px;
+    left: 9px;
+    transition: width 50ms ease 50ms;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.checkbox-wrapper-24 label span:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #ccc;
+    position: absolute;
+    transform: rotate(305deg);
+    top: 16px;
+    left: 10px;
+    transition: width 50ms ease;
+    transform-origin: 0% 0%;
+}
+.checkbox-wrapper-24 label:hover span:before {
+    width: 5px;
+    transition: width 100ms ease;
+}
+.checkbox-wrapper-24 label:hover span:after {
+    width: 10px;
+    transition: width 150ms ease 100ms;
+}
+.checkbox-wrapper-24 input[type=checkbox] {
+    display: none;
+}
+.checkbox-wrapper-24 input[type=checkbox]:checked + label span {
+    background-color: #ff9151;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.checkbox-wrapper-24 input[type=checkbox]:checked + label span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+.checkbox-wrapper-24 input[type=checkbox]:checked + label span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+.checkbox-wrapper-24 input[type=checkbox]:checked + label:hover span {
+    background-color: #ff9151;
+    transform: scale(1.25);
+}
+.checkbox-wrapper-24 input[type=checkbox]:checked + label:hover span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+.checkbox-wrapper-24 input[type=checkbox]:checked + label:hover span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+.link_forgetPassword{
+    margin: 2rem 0;
+}
+a{
+    color:#ff9151;
+    font-weight: bolder;
+}
+a:visited,a:active{
+    color:#ff9151;
+}
+
+/* End Sign up and Login Pages */
+
+/* Error Page */
+
+.error-container {
+    text-align: center;
+}
+
+.error-code {
+    font-size: 120px;
+    color: #e74c3c;
+}
+
+.error-message {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* End Error Page */
+
+
+/* home page */
+
+.navbar {
+    background-color: #ff4500 !important;
+}
+
+.navbar a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 1.5rem !important;
+    transition: background-color 0.3s !important;
+    -webkit-transition: background-color 0.3s !important;
+    -moz-transition: background-color 0.3s !important;
+    -ms-transition: background-color 0.3s !important;
+    -o-transition: background-color 0.3s !important;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+
+.navbar a:hover {
+    background-color: #ffa07a !important;
+}
+.navbar .navbar-toggler{
+    background-color: #ccc !important;
+    width: 5rem !important;
+}
+
+
+
+/* End Home Page */

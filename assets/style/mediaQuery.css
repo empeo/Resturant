@@ -1,0 +1,38 @@
+@media screen and (max-width:1057px){
+    label{
+        font-size: 1.2rem !important;
+    }
+    input{
+        font-size: 1.2rem !important;
+        /* width: ; */
+    }
+    button{
+        font-size: 1.2rem !important;
+    }
+    form .header_form {
+        font-size: 1.3rem !important;
+    }
+}
+@media screen and (max-width:767px){
+    label{
+        font-size: 1rem !important;
+    }
+    input{
+        font-size: 1rem !important;
+        width: 100%;
+    }
+    button{
+        font-size: 1rem !important;
+    }
+    form .header_form {
+        font-size: 1.05rem !important;
+    }
+    button{
+        font-size: 1.05rem !important;
+        width: 75%;
+        height: 2rem !important;
+    }
+    .signup_body form .signup_container {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
