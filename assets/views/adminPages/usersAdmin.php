@@ -123,7 +123,7 @@ if (!empty($resUsers)) {
                     </li>
                     <?php if(isset($_SESSION["isAdmin"])): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./orderUserTable.php">Users Orders</a>
+                        <a class="nav-link" href="../orderUserTable.php">Users Orders</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./admin.php">Admin</a>
